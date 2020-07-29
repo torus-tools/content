@@ -1,0 +1,29 @@
+{
+  "name": "arjan-content",
+  "version": "1.0.0",
+  "description": "API for uploading/downloading/deleting data from your websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjan-tools/content.git"
+  },
+  "keywords": [
+    "website",
+    "content",
+    "static",
+    "aws",
+    "ipfs",
+    "object",
+    "storage",
+    "cdn"
+  ],
+  "author": "Gabriel Kardonski @gkpty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arjan-tools/content/issues"
+  },
+  "homepage": "https://github.com/arjan-tools/content#readme"
+}
