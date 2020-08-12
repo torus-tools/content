@@ -1,8 +1,11 @@
 {
-  "name": "arjan-content",
-  "version": "1.0.0",
-  "description": "API for uploading/downloading/deleting data from your websites",
+  "name": "@torus-tools/content",
+  "version": "0.0.1",
+  "description": "An API for uploading/downloading/deleting content on your websites",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,19 +14,19 @@
     "url": "git+https://github.com/arjan-tools/content.git"
   },
   "keywords": [
-    "website",
     "content",
-    "static",
     "aws",
-    "ipfs",
-    "object",
-    "storage",
-    "cdn"
+    "s3",
+    "cloudfront",
+    "cache"
   ],
-  "author": "Gabriel Kardonski @gkpty",
+  "author": "gabriel kardonski @gkpty",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/arjan-tools/content/issues"
   },
-  "homepage": "https://github.com/arjan-tools/content#readme"
+  "homepage": "https://github.com/arjan-tools/content#readme",
+  "dependencies": {
+    "aws-sdk": "^2.732.0"
+  }
 }
