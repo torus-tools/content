@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/arjan-tools/content/issues"
   },
-  "homepage": "https://github.com/arjan-tools/content#readme"
+  "homepage": "https://github.com/arjan-tools/content#readme",
+  "dependencies": {
+    "aws-sdk": "^2.732.0"
+  }
 }
