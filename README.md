@@ -1,6 +1,6 @@
 # Torus Tools - Content
 
-A promise-based javascript SDK that facilitates operations related to content stored in s3 as well as cache invalidations in AWS cloudfront.
+A promise-based javascript SDK that facilitates operations related to content stored in AWS S3 as well as cache invalidations in AWS cloudfront.
 
 ## Supported Operations
 - list
@@ -12,7 +12,7 @@ A promise-based javascript SDK that facilitates operations related to content st
 - Only upload updated files by default
 - Automatically update cache in cloudfront for updated files that already exist
 - provides a single method that deletes all of the content in a particular bucket
-- Automatically creates non-exsiting directories for downloaded files 
+- Automatically creates non-existing directories for downloaded files 
 
 ## Currently Supporting
 - AWS
@@ -45,11 +45,10 @@ A promise-based javascript SDK that facilitates operations related to content st
 - **description**: upload all the files from the selected directory to the given domain's bucket
 - **params**: (domain, files, dir, cli)
   - **domain**: STRING: REQUIRED: the domain of your site i.e. yoursite.com you want to upload all files to
-  - **files**: ARRAY: The file paths, or key names, that uniquely identifies the objects stored in the bucket. 
-  <!-- ???why specify files if it uploads all files?? -->
+  - **files**: ARRAY: The name of the file you want to upload
   - **dir**: STRING: REQUIRED: the directory path that contains the files you want to upload to the given domain's bucket
   - **cli**: OBJECT: Recieves the cli object from oclif.
-- **returns**: promise(resolve, reject)
+- **returns**: promise(resolve, reject
   - **resolve**: ('All done')
   - **reject**: (error)
 
@@ -57,9 +56,8 @@ A promise-based javascript SDK that facilitates operations related to content st
 - **description**: Uploads content to the bucket of the given domain. By default it will only update any files that have been modified after they were last uploaded. When the resetCache flag is provided it will also create a CloudFront invalidation for the uploaded files that already existed. If the overwrite flag is provided it will upload all of the files.
 - **params**: (domain, files, resetCache, cli)
   - **domain**: STRING: REQUIRED: the domain of your site i.e. yoursite.com you want to upload updated files to
-  - **files**: STRING: The file paths, or key names, that uniquely identifies the objects stored in the bucket.
-  <!-- Why do you have to specify files if its uploading only modified content? -->
-  - **resetCache**: STRING: Flag
+  - **files**: STRING: The name of the files you want to upload
+  - **resetCache**: BOOLEAN:
   - **cli**: OBJECT: Recieves the cli object from oclif.
 - **returns**: promise(resolve, reject)
   - **resolve**: ('All done')
@@ -69,16 +67,16 @@ A promise-based javascript SDK that facilitates operations related to content st
 - **description**: Deletes content in a bucket belonging to a domain. If files are provided it will only delete those specific files. By default it deletes all of the files.
 - **params**: (domain, files)
   - **domain**: STRING: REQUIRED: the root domain of your site i.e. yoursite.com
-  - **files**: ARRAY: REQUIRED: The file paths, or key names, of the files you want to delete
+  - **files**: ARRAY: REQUIRED: The file paths, or key names, that uniquely identifies the objects you want to delete
 - **returns**: promise(resolve, reject)
   - **resolve**: ('All done')
   - **reject**: (error)
 
-## invalidateCache (domain, paths)
-- **description**: re-caches the files in the CDN of the specified domain
-- **params**: (domain, paths)
+## invalidateCache (domain, files)
+- **description**: re-caches the specified files in the CDN of the given domain
+- **params**: (domain, files)
   - **domain**: STRING: REQUIRED: the root domain of the site i.e. yoursite.com
-  - **paths**: STRING: REQUIRED: 
+  - **files**: ARRAY: REQUIRED: 
 - **returns**: promise(resolve, reject)
   - **resolve**: ('all done!')
   - **reject**: (error)
