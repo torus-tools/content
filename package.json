@@ -1,6 +1,6 @@
 {
   "name": "@torus-tools/content",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An API for uploading/downloading/deleting content on your websites",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arjan-tools/content.git"
+    "url": "git+https://github.com/torus-tools/content.git"
   },
   "keywords": [
     "content",
@@ -23,9 +23,9 @@
   "author": "gabriel kardonski @gkpty",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/arjan-tools/content/issues"
+    "url": "https://github.com/torus-tools/content/issues"
   },
-  "homepage": "https://github.com/arjan-tools/content#readme",
+  "homepage": "https://github.com/torus-tools/content#readme",
   "dependencies": {
     "aws-sdk": "^2.732.0"
   }
