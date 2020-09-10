@@ -30,7 +30,7 @@ The example bellow publishes updated content to s3 and creates an invalidation i
 const {listFiles, uploadContent} = require('@torus-tools/content')
 
 let files = await ListFiles().catch(err=> console.log(err))
-await uploadContent('yoursite.com, files, true, true).catch(err => console.log(err))
+await uploadContent('yoursite.com', files, true, true).catch(err => console.log(err))
 ```
 
 # API
